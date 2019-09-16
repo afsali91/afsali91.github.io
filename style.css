@@ -1,0 +1,52 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container-fluid {
+  background-image: url("header.jpg");
+  background-color: #000000;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: relative
+}
+
+.container {
+  display: inline-block;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.col- {
+  text-align: center;
+}
+
+h1 {
+  color: #FFFFFF;
+  font-size: 32px
+}
+
+.headtext {
+  margin-bottom: 220px;
+}
+
+.btn, .btn:hover, .btn:active .btn:focus {
+  color: #FFFFFF;
+  background-color: orangered;
+  border: none;
+  font-weight: bold;
+  outline-color: orangered;
+  border-radius: 20px;
+}

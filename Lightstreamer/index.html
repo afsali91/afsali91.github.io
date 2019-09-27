@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Hello World with Lightstreamer</title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/1.0.7/require.min.js"></script>
+    <script src="js/lightstreamer.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  </head>
+
+  <body>
+   
+    <script>
+$(document).ready(function(){
+    const Url="https://prod-ls-infra-new.onsequel.com/lightstreamer/create_session.txt?LS_protocol=TLCP-2.1.0&callback=?";
+    $('.btn').click(function(){
+        $.ajax({
+            url: Url,
+            type: "POST",
+            data: "LS_polling=true&LS_cause=new.api&LS_polling_millis=0&LS_idle_millis=0&LS_cid=oqVfhw.i6 36e74CHfDprfcDCq&LS_adapter_set=HOST&LS_user=Ry2fwVD9cu-prod2-802426&LS_password=NxPdhDs$FQ3F6$mF&",
+            headers: {
+                "accept":"*/*",
+                "content-type":"text/plain; charset=UTF-8",
+                "pragma":"no-cache",
+                "cache-control":"no-cache",
+                "accept-language":"en-us",
+                "Access-Control-Allow-Origin":"*",
+                "Access-Control-Allow-Credentials":"true",
+                "Access-Control-Allow-Methods":"GET,HEAD,OPTIONS,POST,PUT",
+                "Access-Control-Allow-Headers":"Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers"
+            },
+            dataType: "TXT",
+            success: function (result){
+                console.log(result)
+            },
+            error:function(error){
+                console.log(error)
+            }
+        })
+    })
+
+    
+    
+
+
+})
+</script>
+<button type="button" class="btn">Click Me!</button>
+  </body>
+</html>
+
